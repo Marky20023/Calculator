@@ -8,12 +8,22 @@
     <title>Simple Calculator</title>
   </head>
   <body>
-   <div class="grid grid-cols-1 gap-4 bg-slate-100 p-10 rounded-lg">
+    <div
+      class="grid grid-cols-1 gap-10 justify-items-center content-center items-center h-screen"
+    >
+      <div class="">
+        <h1 class="text-3xl text-center font-bold">
+          Simple Calculator with Js and Tailwind CSS
+        </h1>
+      </div>
+      <div class="grid grid-cols-1 gap-4 bg-slate-100 p-10 rounded-lg">
         <div class="flex flex-start flex-col">
           <label class="text-1xl mb-2 font-bold text-gray-700">
             Enter First Number
           </label>
           <input
+            type="text"
+            id="firstNumber"
             class="bg-white border-2 border-slate-300 p-2 rounded-lg focus:outline-none focus:bg-white focus:border-purple-500"
             placeholder="e.g 10"
           />
@@ -21,30 +31,35 @@
             Enter Second Number
           </label>
           <input
+            type="text"
+            id="secondNumber"
             class="bg-white border-2 border-slate-300 p-2 rounded-lg focus:outline-none focus:bg-white focus:border-purple-500"
             placeholder="e.g 25"
           />
         </div>
         <div class="">
-          <button class="bg-blue-500 text-white p-4 rounded-md" onclick="add()">
-            +
+          <button class="bg-blue-500 text-white p-3 rounded-md" onclick="add()">
+            Add
           </button>
-          <button class="bg-blue-500 text-white p-4 rounded-md" onclick="sub()">
-            -
+          <button class="bg-blue-500 text-white p-3 rounded-md" onclick="sub()">
+            Sub
           </button>
-          <button class="bg-blue-500 text-white p-4 rounded-md" onclick="mul()">
-            x
+          <button class="bg-blue-500 text-white p-3 rounded-md" onclick="mul()">
+            Mul
           </button>
-          <button class="bg-blue-500 text-white p-4 rounded-md" onclick="div()">
-            ÷
+          <button class="bg-blue-500 text-white p-3 rounded-md" onclick="div()">
+            Div
           </button>
-          <button class="bg-blue-500 text-white p-4 rounded-md" onclick="clr()">
-            Clear All
+          <button class="bg-blue-500 text-white p-3 rounded-md" onclick="mod()">
+            Mod
+          </button>
+          <button class="bg-blue-500 text-white p-3 rounded-md" onclick="clr()">
+            Clear
           </button>
         </div>
         <div class="">
-          <h1 class="text-2xl text-center font-bold text-Black-700 inline-block">
-            Final Result = <span id="result"></span>
+          <h1 class="text-2xl text-center font-bold text-gray-700 inline-block">
+            Result: <span id="result"></span>
           </h1>
         </div>
       </div>
